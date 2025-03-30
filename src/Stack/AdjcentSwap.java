@@ -27,6 +27,7 @@ public class AdjcentSwap {
     }
 }
 
+//to check the properties
 
 //Minimum Swaps for Bracket Balancing
 //You are given a string s of 2*n characters consisting of n ‘[‘ brackets and n ‘]’ brackets. A string is considered balanced if it can be represented in the form a[b] where a and b are balanced strings. We can make an unbalanced string balanced by swapping adjacent characters. Calculate the minimum number of swaps necessary to make a string balanced.
