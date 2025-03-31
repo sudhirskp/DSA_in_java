@@ -1,10 +1,10 @@
 package Stack;
 
-import java.util.Arrays;
-import java.util.PriorityQueue;
 import java.util.Stack;
 
-public class Maxrectangle {
+public class MaxRectangle {
+
+    //hard leet 84
 
     //1st method
     public int[] findNextSmaller(int[] arr){
@@ -95,7 +95,7 @@ public class Maxrectangle {
     //-----------------------------
     public static void main(String[] args) {
         int [] arr = {2,1,5,6,2,3};
-        Maxrectangle m = new Maxrectangle();
+        MaxRectangle m = new MaxRectangle();
         //System.out.println(m.largestRectangleArea(arr));
         System.out.println(m.largestRectangleArea2(arr));
         System.out.println(m.largestRectangleArea3(arr));
