@@ -1,0 +1,70 @@
+package String;
+
+public class ReversWord {
+
+    public String reverseWords(String s) {
+        String[] arr = s.split(" ");
+        for (int i = 0; i < arr.length; i++){
+            if (arr[i].equals("")) continue;
+            String str = arr[i];
+            char[] c = str.toCharArray();
+            int j = 0;
+            int k = str.length() - 1;
+            while (j < k) {
+                char temp = c[j];
+                c[j] = c[k];
+                c[k] = temp;
+                j++;
+                k--;
+            }
+            arr[i] = new String(c);
+        }
+        return String.join(" ", arr);
+    }
+
+    public String reverseWordss(String s) {
+        String[] arr = s.split(" ");
+        StringBuilder res = new StringBuilder();
+        for (String c : arr) {
+            StringBuilder ch = new StringBuilder(c);
+            res.append(ch.reverse());
+            res.append(" ");
+        }
+        return res.toString().trim();
+    }
+
+    public void reverse(char[] arr, int start, int end){
+        while(start<=end){
+            char temp = arr[start];
+            arr[start]=arr[end];
+            arr[end]=temp;
+            start++;
+            end--;
+        }
+    }
+
+    //100% faster
+    public String reverse(String s){
+        if(s == null || s.length() == 0) {
+            return s;
+        }
+        char arr [] = s.toCharArray();
+        int n = arr.length;
+        int start =0;
+        for(int end =0;end<n;end++){
+            if(arr[end]==' '){
+                reverse(arr,start,end-1);
+                start=end+1;
+            }
+        }
+        reverse(arr, start, n-1); // reverse the last word
+        return new String(arr);
+    }
+
+
+    public static void main(String[] args) {
+        String s = "Let's take contest";
+        ReversWord ob = new ReversWord();
+        System.out.println(ob.reverseWords(s));
+    }
+}
