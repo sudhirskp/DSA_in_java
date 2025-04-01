@@ -73,7 +73,7 @@ public class MaxRectangle {
     }
 //------------------------------------------------------------------------------------------
 
-    //by using custome stack 99% faster
+    //by using costume stack 99% faster
     public int largestRectangleArea3(int[] heights) {
         int n = heights.length;
         int st [] = new int[n+1];
@@ -98,6 +98,6 @@ public class MaxRectangle {
         MaxRectangle m = new MaxRectangle();
         //System.out.println(m.largestRectangleArea(arr));
         System.out.println(m.largestRectangleArea2(arr));
-        System.out.println(m.largestRectangleArea3(arr));
+        //System.out.println(m.largestRectangleArea3(arr));
     }
 }
