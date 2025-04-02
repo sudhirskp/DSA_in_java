@@ -41,6 +41,11 @@ public class Mystk{
         }
         return false;
     }
+
+    public int size(){
+        return top + 1;
+    }
+
     public static void main(String[] args){
         Mystk mystk = new Mystk(5);
         mystk.push(10);
@@ -53,5 +58,6 @@ public class Mystk{
         mystk.pop();
         mystk.pop();
         mystk.pop();
+        System.out.println(mystk.size());
     }
 }
