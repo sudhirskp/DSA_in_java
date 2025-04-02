@@ -41,7 +41,7 @@ public class MinNoSwap {
     public static void main(String[] args) {
         String s = "]]][[[";
         MinNoSwap ob = new MinNoSwap();
-        //System.out.println(ob.SwapCount(s));
-        System.out.println(ob.SwapCount2(s));
+        System.out.println(ob.SwapCount(s));
+        //System.out.println(ob.SwapCount2(s));
     }
 }

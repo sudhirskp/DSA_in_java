@@ -1,9 +1,8 @@
 package Stack;
-
 import java.util.Stack;
 
 public class NextGreaterII {
-    public int[] nextGreaterElements(int[] nums) {
+    public int[] nextGreaterElements(int[] nums){
         int n = nums.length;
         Stack<Integer> stk = new Stack<>();
         int res [] = new int[n];
