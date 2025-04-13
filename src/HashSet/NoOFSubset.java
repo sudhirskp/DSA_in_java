@@ -58,7 +58,7 @@ public class NoOFSubset {
 //
 //Input : arr[] = {1, 2, 3, 4}
 //Output :1
-//Explanation : A single subset can contains all values and all values are distinct.
+//Explanation : A single subset can contain all values and all values are distinct.
 //
 //Input : arr[] = {1, 2, 3, 3}
 //Output : 2
