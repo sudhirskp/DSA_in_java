@@ -21,6 +21,7 @@ public class firstWindowNegative {
            }
            index++;
        }
+
         res [0] =(q.isEmpty() ? 0 : q.peek());
         for(int i=1; i<=n-k; i++){
             if(arr[i-1]<0){
