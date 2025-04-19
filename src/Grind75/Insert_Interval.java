@@ -1,4 +1,4 @@
-package Blind75;
+package Grind75;
 
 import java.util.ArrayList;
 
