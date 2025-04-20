@@ -4,6 +4,30 @@ import java.util.Arrays;
 
 public class SortColor {
 
+
+    //O(n) time complexity and O(1) space complexity
+    public void sortColors1(int[] nums) {
+        int n = nums.length;
+        int low =0 , high = n-1,i= 0;
+        while(i<=high){
+            if(nums[i]==0){
+                int temp = nums[i];
+                nums[i] = nums[low];
+                nums[low] = temp;
+                low++;
+                i++;
+            }else if (nums[i]==2){
+                int temp = nums[i];
+                nums[i] = nums[high];
+                nums[high] = temp;
+                high--;
+            }else{
+                i++;
+            }
+        }
+    }
+
+    //O(n) time complexity and O(n) space complexity
     public void sortColors(int[] nums) {
         int n = nums.length;
         int count [] = new int [3];
