@@ -15,7 +15,7 @@ public class MinWindowSubstring {
         int si = -1; //StartIndex
         int i = 0; //WindowEnd
         int minLen = Integer.MAX_VALUE;
-        int ucc = map.size(); // unque char count
+        int ucc = map.size(); // unique char count
 
         while (i < n) {
             char ch = s.charAt(i);
