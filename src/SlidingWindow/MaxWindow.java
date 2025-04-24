@@ -8,13 +8,13 @@ public class MaxWindow {
     public int[] maxSlidingWindow(int[] nums, int k){
         int n = nums.length;
         int res [] = new int[n - k + 1];
-        if(n==0){
-            return res;
+        if (n == 0 || k > n) {
+            return new int[0];
         }
         ArrayDeque<Integer> deq = new ArrayDeque<>();
         int index =0;
         while(index<k){
-            if(!deq.isEmpty() && nums[deq.peekLast()]<=nums[index]){
+            while(!deq.isEmpty() && nums[deq.peekLast()]<=nums[index]){
                 deq.pollLast();
             }
             deq.offerLast(index++);
@@ -39,10 +39,10 @@ public class MaxWindow {
 
     public static void main(String[] args) {
         MaxWindow mw = new MaxWindow();
-        int[] nums = {1,3,-1,-3,5,3,6,7};
+        int[] nums = {4,3,11};
         int k = 3;
         int[] result = mw.maxSlidingWindow(nums, k);
-        System.out.println(Arrays.toString(result)); // Output: [3, 3, 5, 5, 6, 7]
+        System.out.println(Arrays.toString(result)); // Output: [11]
     }
 }
 
