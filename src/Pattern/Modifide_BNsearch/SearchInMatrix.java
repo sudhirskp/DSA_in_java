@@ -1,0 +1,30 @@
+package Pattern.Modifide_BNsearch;
+
+public class SearchInMatrix {
+    public boolean searchMatrix(int[][] matrix, int target) {
+        for (int arr[] : matrix) {
+            int left = 0;
+            int right = arr.length - 1;
+            if (target >= arr[left] && target <= arr[right]) {
+                while (left <= right) {
+                    int mid = left + (right - left) / 2;
+                    if (arr[mid] == target) {
+                        return true;
+                    } else if (arr[mid] > target) {
+                        right = mid - 1;
+                    } else {
+                        left = mid + 1;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+    public static void main(String[] args) {
+        SearchInMatrix s = new SearchInMatrix();
+        int[][] matrix = {{1,3,5,7},{10,11,16,20},{23,30,34,60}};
+        System.out.println(s.searchMatrix(matrix, 3));
+    }
+}
+
+//leetcode 240
