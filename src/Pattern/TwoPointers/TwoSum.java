@@ -1,4 +1,4 @@
-package Pattern.ToPointers;
+package Pattern.TwoPointers;
 
 public class TwoSum {
     public int[] twoSum(int[] numbers, int target) {
