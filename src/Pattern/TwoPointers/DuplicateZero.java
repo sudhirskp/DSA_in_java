@@ -1,4 +1,4 @@
-package Pattern.ToPointers;
+package Pattern.TwoPointers;
 
 public class DuplicateZero {
     public static void duplicateZeros(int[] arr) {
