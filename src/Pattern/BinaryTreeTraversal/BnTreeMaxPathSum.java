@@ -26,3 +26,9 @@ public class BnTreeMaxPathSum {
     }
 }
 //leetcode 124
+
+
+//In Java, primitive types (like int) are passed by value, meaning that
+//    if we passed max as an int, modifications inside the recursive function wouldn’t persist outside of that specific call.
+//        However, arrays (and objects) are passed by reference,
+//allowing the changes to max[0] inside maxPath() to be reflected in all recursive calls
