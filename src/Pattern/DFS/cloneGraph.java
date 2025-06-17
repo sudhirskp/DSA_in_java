@@ -21,7 +21,7 @@ class Node {
     }
 }
 
-
+//by using BFS
 public class cloneGraph {
 
     public Node cloneGraph(Node node) {
@@ -41,6 +41,22 @@ public class cloneGraph {
             }
         }
         return map.get(node);
+    }
+
+    //by using DFS
+    public Node cloneGraph2(Node node) {
+        if(node==null) return node;
+        HashMap<Node,Node> map = new HashMap<>();
+        dfs(node,map);
+        return map.get(node);
+    }
+    public void dfs(Node node, HashMap<Node,Node> map){
+        if(map.containsKey(node)) return;
+        map.put(node, new Node(node.val, new ArrayList<>()));
+        for(Node neigh : node.neighbors){
+            dfs(neigh, map);
+            map.get(node).neighbors.add(map.get(neigh));
+        }
     }
 
     public static void main(String[] args) {
