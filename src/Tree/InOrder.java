@@ -44,6 +44,6 @@ public class InOrder {
         root.r.r = new Node(6);
         root.r.r.l = new Node(7);
 
-        System.out.println(in.InTraversalRecursive(root));
+        System.out.println(in.InTraversal(root));
     }
 }
