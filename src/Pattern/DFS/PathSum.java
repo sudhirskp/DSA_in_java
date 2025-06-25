@@ -3,9 +3,9 @@ package Pattern.DFS;
 
 import com.sun.source.tree.Tree;
 
-public class PathSum {
+ public class PathSum {
 
-    class TreeNode {
+     class TreeNode {
         int val ;
         TreeNode left;
         TreeNode right;
