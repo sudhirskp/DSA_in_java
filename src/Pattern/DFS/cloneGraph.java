@@ -4,7 +4,7 @@ package Pattern.DFS;
 import java.util.*;
 
 // Definition for a Node.
-class Node {
+ class Node {
     public int val;
     public List<Node> neighbors;
     public Node() {
