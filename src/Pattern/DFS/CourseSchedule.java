@@ -7,6 +7,7 @@ import java.util.Queue;
 
 public class CourseSchedule {
 
+    //by using bfs+topoSort
         public int[] findOrder(int numCourses, int[][] prerequisites) {
             List<List<Integer>> adjList = new ArrayList<>();
             int indegree[] = new int[numCourses];
