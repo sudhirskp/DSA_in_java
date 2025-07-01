@@ -5,6 +5,7 @@ import java.util.Queue;
 
 public class surroundedRegions {
 
+    //using dfs
     int row, col;
     public void solve(char[][] board) {
         row = board.length;
@@ -44,6 +45,7 @@ public class surroundedRegions {
 
     }
 
+    //using bfs
     public void solve1(char[][] board) {
         row = board.length;
         col = board[0].length;
