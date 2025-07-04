@@ -28,12 +28,33 @@ public class Basics {
             return index;
         }
     }
+
+    //factorial
+
+    public static  int fact(int n){
+        if(n==0 || n==1) return 1;
+        return n* fact(n-1);
+    }
+
+    //fibonacci seris
+    public static int fiBo(int n){
+        if(n==1) return 0;
+        if(n==2) return 1;
+        return fiBo(n-1) + fiBo(n-2);
+    }
     public static void main(String[] args) {
 
-        //System.out.println(Sum(5));
-       // printIncreasing(5);
+        System.out.println(Sum(5));
+        printIncreasing(5);
+
         printArr(new int [] {1,3,4,5,6,7} , 5);
+
         System.out.println();
         System.out.println(printFirst(new int []{2,3,4,5,6,4,3},4,0));
+
+        System.out.println(fact(5));
+        for(int i=1;i<=5;i++){
+            System.out.print(fiBo(i) + " ");
+        }
     }
 }
