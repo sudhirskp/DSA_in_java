@@ -1,0 +1,108 @@
+package HashMap_HashSet;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+
+public class MyHashMap {
+    private Map<Object, Object> map = new HashMap<>();
+
+    public void put(Object key, Object value) {
+        map.put(key, value);
+    }
+
+    public Object get(Object key) {
+        return map.get(key);
+    }
+
+    public boolean containsValue(Object value) {
+        return map.containsValue(value);
+    }
+
+    class MyCollege {
+        int regNo;
+        private int hashCode;
+
+        MyCollege(int regNo) {
+            this.regNo = regNo;
+            this.hashCode = Objects.hashCode(regNo);
+        }
+
+        @Override
+        public int hashCode() {
+            return hashCode;
+        }
+
+        @Override
+        public boolean equals(Object obj) {
+            MyCollege college = (MyCollege) obj;
+            return this.regNo == college.regNo;
+        }
+    }
+
+    class MyRanking {
+        int rank;
+
+        MyRanking(int rank) {
+            this.rank = rank;
+        }
+
+        @Override
+        public String toString() {
+            return "" + this.rank;
+        }
+
+        @Override
+        public boolean equals(Object obj) {
+            MyRanking r = (MyRanking) obj;
+            return this.rank == r.rank;
+        }
+    }
+
+    public static class MyHashMapExample {
+        public static void main(String[] args) {
+            HashMap<Integer, String> myMap = new HashMap<>();
+            myMap.put(1, "Shashwat");
+            myMap.put(2, "Pavleen");
+            myMap.put(3, "aashray");
+            myMap.put(4, "ayush");
+            System.out.println(myMap);
+            myMap.put(2, "Shivansh");
+            System.out.println(myMap);
+            System.out.println(myMap.get(5));
+            System.out.println(myMap.containsKey(1));
+            System.out.println(myMap.getOrDefault(5, "Not Present"));
+            myMap.replace(5, "pavleen");
+            System.out.println(myMap);
+            for (Map.Entry<Integer, String> entry : myMap.entrySet()) {
+                System.out.println("Key -> " + entry.getKey());
+                System.out.println("Value -> " + entry.getValue());
+            }
+            for (Integer key : myMap.keySet()) {
+                System.out.println("Key -> " + key);
+                System.out.println("Value -> " + myMap.get(key));
+            }
+
+            MyHashMap collegeRankingMap = new MyHashMap();
+            collegeRankingMap.put(111, 1);
+            collegeRankingMap.put(312, 2);
+            collegeRankingMap.put(457, 3);
+            System.out.println(collegeRankingMap.get(111));
+            System.out.println(collegeRankingMap.containsValue(1));
+
+            MyHashMap collegeRankingMap2 = new MyHashMap();
+            MyHashMap.MyCollege college1 = new MyHashMap().new MyCollege(111);
+            MyHashMap.MyRanking ranking1 = new MyHashMap().new MyRanking(1);
+            MyHashMap.MyCollege college2 = new MyHashMap().new MyCollege(312);
+            MyHashMap.MyRanking ranking2 = new MyHashMap().new MyRanking(2);
+            MyHashMap.MyCollege college3 = new MyHashMap().new MyCollege(457);
+            MyHashMap.MyRanking ranking3 = new MyHashMap().new MyRanking(3);
+
+            collegeRankingMap2.put(college1, ranking1);
+            collegeRankingMap2.put(college2, ranking2);
+            collegeRankingMap2.put(college3, ranking3);
+            System.out.println(collegeRankingMap2.get(college1));
+            System.out.println(collegeRankingMap2.containsValue(ranking1));
+        }
+    }
+}
