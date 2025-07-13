@@ -2,7 +2,6 @@ package Jus;
 
 public class mxWeight {
 
-
     public int maxWeightCell(int[] exits) {
         int n = exits.length;
         int []w = new int [n];
