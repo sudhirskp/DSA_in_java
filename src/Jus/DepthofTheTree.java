@@ -1,6 +1,6 @@
 package Jus;
 
-//not same but kind of
+//not same but kind of question came into juspay
 
 class TreeNode {
             int val;
