@@ -1,7 +1,7 @@
 package Jus;
 
 import java.util.List;
-
+//kind of this question coming in Juspay
 public class N_aryTree {
 
     class Node {
