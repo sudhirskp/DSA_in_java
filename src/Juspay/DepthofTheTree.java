@@ -1,4 +1,4 @@
-package Jus;
+package Juspay;
 
 //not same but kind of question came into juspay
 

@@ -1,4 +1,4 @@
-package Jus;
+package Juspay;
 
 public class mxWeight {
 

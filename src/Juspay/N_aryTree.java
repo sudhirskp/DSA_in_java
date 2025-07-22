@@ -1,4 +1,4 @@
-package Jus;
+package Juspay;
 
 import java.util.List;
 //kind of this question coming in Juspay
