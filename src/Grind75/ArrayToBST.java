@@ -17,7 +17,6 @@ public class ArrayToBST {
 
     public TreeNode sortedArrayToBST(int[] nums) {
         if(nums.length==0) return null;
-        TreeNode root = null;
         return Build(0,nums.length-1,nums);
     }
 
