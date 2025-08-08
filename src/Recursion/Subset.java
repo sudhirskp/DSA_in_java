@@ -20,7 +20,7 @@ public class Subset {
 
         temp.add(nums[index]);
         powerSet(nums,res,temp,index+1);
-        temp.remove(temp.size()-1);
+        temp.remove(temp.size()-1); // Backtrack
         powerSet(nums,res,temp,index+1);
     }
 
