@@ -74,3 +74,8 @@ public class Serialization_de {
         System.out.println(serialized);
     }
 }
+//leetCode 297
+//https://leetcode.com/problems/serialize-and-deserialize-binary-tree/description/
+//hard
+//time complexity : O(n)
+//space complexity : O(n)
