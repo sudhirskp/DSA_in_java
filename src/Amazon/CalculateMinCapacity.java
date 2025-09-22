@@ -46,6 +46,4 @@ public class CalculateMinCapacity {
         }
 }
 
-//Amazon - SDE 1 (full time) OA question 2025 [Sep 20]
-//College Student University Selection
-//All test case passed
+//Amazon - SDE 1 (full time) OA

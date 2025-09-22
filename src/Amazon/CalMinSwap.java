@@ -45,6 +45,4 @@ public class CalMinSwap {
             System.out.println(calculateMinimumSwaps(fileSize, affinity)); // Output: 3
         }
 }
-//Amazon - SDE 1 (full time) OA question 2025 [Sep 20]
-//College Student University Selection
-//Test case passed  - 13/15
+//Amazon - SDE 1 (full time) OA
