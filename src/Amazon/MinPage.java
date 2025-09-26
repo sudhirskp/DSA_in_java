@@ -57,6 +57,7 @@ public class MinPage {
     }
 }
 //gfg problem : link - https://www.geeksforgeeks.org/problems/allocate-minimum-number-of-pages0937/1
-//leetcode similar problem : link - https://leetcode.com/problems/split-array-largest-sum/description/
+//leetcode similar problem 410 : link - https://leetcode.com/problems/split-array-largest-sum/description/
+//leetCode 1011 : https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/
 //TC : O(n log(sum of arr))
 //SC : O(1)
