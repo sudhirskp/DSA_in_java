@@ -1,4 +1,4 @@
-package Amazon;
+package DSA_Sheet.Amazon;
 
 public class MinPage {
 

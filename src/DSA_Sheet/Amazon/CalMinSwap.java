@@ -1,4 +1,4 @@
-package Amazon;
+package DSA_Sheet.Amazon;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -45,4 +45,4 @@ public class CalMinSwap {
             System.out.println(calculateMinimumSwaps(fileSize, affinity)); // Output: 3
         }
 }
-//Amazon - SDE 1 (full time) OA
+//DSA_Sheet.Amazon - SDE 1 (full time) OA

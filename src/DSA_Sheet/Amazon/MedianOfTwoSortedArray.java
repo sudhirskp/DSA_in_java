@@ -1,6 +1,4 @@
-package Amazon;
-
-import Grind75.MergeIntervals;
+package DSA_Sheet.Amazon;
 
 public class MedianOfTwoSortedArray {
 

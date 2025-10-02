@@ -1,4 +1,4 @@
-package Amazon;
+package DSA_Sheet.Amazon;
 
 import java.util.Arrays;
 
@@ -46,4 +46,4 @@ public class CalculateMinCapacity {
         }
 }
 
-//Amazon - SDE 1 (full time) OA
+//DSA_Sheet.Amazon - SDE 1 (full time) OA

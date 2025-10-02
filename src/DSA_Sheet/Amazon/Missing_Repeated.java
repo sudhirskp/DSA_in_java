@@ -1,4 +1,4 @@
-package Amazon;
+package DSA_Sheet.Amazon;
 
 import java.util.Arrays;
 import java.util.HashMap;
