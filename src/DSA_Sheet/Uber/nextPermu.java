@@ -1,4 +1,4 @@
-package DSA_Sheet.Amazon.Uber;
+package DSA_Sheet.Uber;
 
 public class nextPermu {
 

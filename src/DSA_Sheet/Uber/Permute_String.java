@@ -1,4 +1,4 @@
-package DSA_Sheet.Amazon.Uber;
+package DSA_Sheet.Uber;
 
 import java.util.Arrays;
 
