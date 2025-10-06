@@ -11,13 +11,13 @@ public class LRU {
         private final Map<Integer, Integer> map;
         private final LinkedList<Integer> usage;
 
-        public LRUCache(int capacity) {
+        public LRU(int capacity) {
             this.capacity = capacity;
             this.map = new HashMap<>();
             this.usage = new LinkedList<>();
         }
 
-        public int get(int key) {
+    public int get(int key) {
             if (!map.containsKey(key)) return -1;
 
             // Move key to the end to mark it as recently used
@@ -44,7 +44,7 @@ public class LRU {
         }
 
     public static void main(String[] args) {
-        LRUCache lruCache = new LRU().new LRUCache(2);
+        LRU lruCache = new LRU(2);
         lruCache.put(1, 1); // cache is {1=1}
         lruCache.put(2, 2); // cache is {1=1, 2=2}
         System.out.println(lruCache.get(1)); // return 1
