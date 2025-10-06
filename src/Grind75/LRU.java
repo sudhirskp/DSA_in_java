@@ -6,7 +6,7 @@ import java.util.Map;
 
 public class LRU {
 
-    class LRUCache {
+
         private final int capacity;
         private final Map<Integer, Integer> map;
         private final LinkedList<Integer> usage;
@@ -42,7 +42,7 @@ public class LRU {
                 usage.addLast(key);
             }
         }
-    }
+
     public static void main(String[] args) {
         LRUCache lruCache = new LRU().new LRUCache(2);
         lruCache.put(1, 1); // cache is {1=1}
