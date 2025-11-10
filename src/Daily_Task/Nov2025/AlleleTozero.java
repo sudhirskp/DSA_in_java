@@ -19,7 +19,9 @@ public class AlleleTozero {
     }
 
     public static void main(String[] args) {
-
+        AlleleTozero alleleTozero = new AlleleTozero();
+        int [] nums = {3,1,2,1};
+        System.out.println(alleleTozero.minOperations(nums));
     }
 }
 //leetCode 3542
