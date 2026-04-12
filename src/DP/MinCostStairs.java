@@ -19,3 +19,4 @@ public class MinCostStairs {
         System.out.println(minCostClimbingStairs(new int []{10,15,20}));
     }
 }
+//LeetCode 746

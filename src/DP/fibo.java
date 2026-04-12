@@ -9,7 +9,7 @@ public class fibo {
         int x = fib(n-1,dp);
         int y = fib(n-2,dp);
         dp[n] = x+y;
-        return x+y;
+        return dp[n];
     }
 
     //bottom-up Approach

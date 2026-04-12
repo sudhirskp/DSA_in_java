@@ -30,7 +30,7 @@ public class Tribonnaci {
         int case3 = triBo2(n-3);
 
         dp[n] = case1+case2+case3;
-        return case1+case2+case3;
+        return dp[n];
     }
 
     public static void main(String[] args) {
