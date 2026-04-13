@@ -39,7 +39,7 @@ public class House_Robber_II {
         //-----------------------------------------------------
 
 
-        public int rob2(int[] nums) {
+        public static int rob2(int[] nums) {
             int n = nums.length;
             if(n==1) return nums[0];
             if(n==0) return 0;
@@ -50,7 +50,7 @@ public class House_Robber_II {
             return Math.max(c1,c2);
         }
 
-        int case1(int [] nums , int st,int end){
+        public static int case1(int [] nums , int st,int end){
             int n = end;
             if(n==st) return nums[st];
             if(n==0) return 0;
@@ -66,7 +66,7 @@ public class House_Robber_II {
             return pre1;
         }
 
-        int case2(int [] nums, int st,int end){
+        public static int case2(int [] nums, int st,int end){
             int n = end;
             if(n==st) return nums[st];
             if(n==0) return 0;
@@ -85,6 +85,7 @@ public class House_Robber_II {
 
     public static void main(String[] args) {
         System.out.println(rob(new int []{2,3,2}));
+        System.out.println(rob2(new int []{1,2,3,1}));
     }
 }
 //LeetCode 213
