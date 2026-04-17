@@ -37,6 +37,7 @@ public class Partition {
 
         //TC: O(N*target)
         //SC: O(N*target)
+        //Memoization
         public boolean canPartitionDP(int[] nums) {
             n = nums.length;
             total = 0;
@@ -69,10 +70,33 @@ public class Partition {
             return fst || sec;
         }
 
+        //TC: O(N*target)
+        //SC: O(N)
+        //Tabulation
+    public boolean canPartitionDPT(int[] nums) {
+        int n = nums.length;
+        int total = 0;
+        for (int num : nums) total += num;
+
+        if (total % 2 != 0) return false;
+        int target = total / 2;
+        boolean [] dp = new boolean [target+1];
+        dp[0] = true;
+        for(int num : nums){
+            for(int i = target;i>=num;i--){
+                if(dp[i-num]){
+                    dp[i] = true;
+                }
+            }
+        }
+        return dp[target];
+    }
+
     public static void main(String[] args) {
         Partition p = new Partition();
         System.out.println(p.canPartition(new int []{1,5,11,5}));
         System.out.println(p.canPartitionDP(new int []{1,5,11,5}));
+        System.out.println(p.canPartitionDPT(new int []{1,5,11,5}));
     }
 }
 //https://leetcode.com/problems/partition-equal-subset-sum/
