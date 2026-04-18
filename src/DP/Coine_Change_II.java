@@ -1,5 +1,6 @@
 package DP;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -40,7 +41,7 @@ public class Coine_Change_II {
         //by using tabulation
             public int change1(int amount, int[] coins) {
                 int n = coins.length;
-                int[][] dp = new int[n+1][amount+1];
+                int[][] dp = new int[n + 1][amount + 1];
 
                 // base case: making 0 amount
                 for (int i = 0; i <= n; i++) {
@@ -50,22 +51,59 @@ public class Coine_Change_II {
                 for (int i = 1; i <= n; i++) {
                     for (int j = 1; j <= amount; j++) {
                         // not taking the coin
-                        dp[i][j] = dp[i-1][j];
+                        dp[i][j] = dp[i - 1][j];
 
                         // taking the coin (unlimited supply)
-                        if (j >= coins[i-1]) {
-                            dp[i][j] += dp[i][j - coins[i-1]];
+                        if (j >= coins[i - 1]) {
+                            dp[i][j] += dp[i][j - coins[i - 1]];
                         }
                     }
                 }
 
                 return dp[n][amount];
             }
+            //by using memoization
+            //TC: O(N*target)
+            //SC: O(N*target)
+        int n;
+        public int change2(int amount, int[] coins) {
+            n = coins.length;
+            int [][] dp = new int [n][amount+1];
+            for(int d [] : dp){
+                Arrays.fill(d,-1);
+            }
+            return combination(n - 1, coins, amount,dp);
+        }
+
+         private int combination(int index, int[] coins, int amount, int[][] dp) {
+
+             if (index == 0) {
+                 if (amount % coins[0] == 0) {
+                     dp[0][amount] = 1;
+                     return 1;
+                 }
+                 return 0;
+             }
+
+             if (dp[index][amount] != -1) {
+                 return dp[index][amount];
+             }
+
+             int pick = 0;
+             if (amount >= coins[index]) {
+                 pick += combination(index, coins, amount - coins[index], dp);
+             }
+             int NoPick = combination(index - 1, coins, amount, dp);
+             dp[index][amount] = pick + NoPick;
+
+             return pick + NoPick;
+         }
 
     public static void main(String[] args) {
         int [] coins = {1,2,5};
         Coine_Change_II ob = new Coine_Change_II();
         System.out.println(ob.change1(5,coins));
+        System.out.println(ob.change2(5,coins));
     }
 }
 // //leet 518
