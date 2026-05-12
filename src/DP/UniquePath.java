@@ -49,11 +49,26 @@ public class UniquePath {
         return dp[m-1][n-1];
     }
 
+    //Math //TC: O(N) SC: O(1)
+    public int uniquePaths2(int m, int n) {
+        int total = m + n -2;
+        int down = m -1;
+
+        long res  = 1;
+
+        for(int i =1;i<=down;i++){
+            res  = res * (total - down + i)/i;
+        }
+
+        return (int)res;
+    }
+
 
     public static void main(String[] args) {
         UniquePath obj = new UniquePath();
         System.out.println(obj.uniquePaths(3,7));
         System.out.println(obj.uniquePathsTB(3,7));
+        System.out.println(obj.uniquePaths2(3,7));
     }
 }
 //https://leetcode.com/problems/unique-paths/
